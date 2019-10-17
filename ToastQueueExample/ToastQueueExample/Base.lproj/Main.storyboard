@@ -18,23 +18,39 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kra-w4-QIU">
-                                <rect key="frame" x="137.5" y="438" width="139" height="30"/>
-                                <state key="normal" title="Tap to make a toast!"/>
-                                <connections>
-                                    <action selector="buttonDidTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="HF9-hQ-i0b"/>
-                                </connections>
-                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="KuW-JN-H8Q">
+                                <rect key="frame" x="132" y="423" width="150" height="60"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras pellentesque." borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BCT-D4-3ze">
+                                        <rect key="frame" x="0.0" y="0.0" width="150" height="30"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kra-w4-QIU">
+                                        <rect key="frame" x="0.0" y="30" width="150" height="30"/>
+                                        <state key="normal" title="Tap to make a toast"/>
+                                        <connections>
+                                            <action selector="buttonDidTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="HF9-hQ-i0b"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" priority="1" id="nlf-dR-jsq"/>
+                                    <constraint firstAttribute="width" constant="150" id="xWw-dg-FpT"/>
+                                </constraints>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="Kra-w4-QIU" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="Upa-zu-hR7"/>
-                            <constraint firstItem="Kra-w4-QIU" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="Vnw-R7-wbN"/>
+                            <constraint firstItem="KuW-JN-H8Q" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="DRa-WV-KM8"/>
+                            <constraint firstItem="KuW-JN-H8Q" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="mrN-yC-3zX"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
                         <outlet property="button" destination="Kra-w4-QIU" id="XM0-Ru-8wg"/>
+                        <outlet property="textField" destination="BCT-D4-3ze" id="GkU-lS-G6g"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

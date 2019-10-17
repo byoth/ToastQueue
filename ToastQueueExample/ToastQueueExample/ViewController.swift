@@ -12,15 +12,18 @@ import ToastQueue
 
 
 final class ViewController: UIViewController {
+    @IBOutlet weak var textField: UITextField!
     @IBOutlet weak var button: UIButton!
     
     
-    var count: Int = 0
+    fileprivate var count: Int = 0
     
     
     @IBAction func buttonDidTap(_ sender: Any) {
         self.count += 1
         
-        ToastManager.shared.showMessage("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras pellentesque. \(self.count)")
+        ToastManager.shared.showMessage("\(self.textField.text ?? "") \(self.count)")
+        
+        self.view.endEditing(true)
     }
 }
