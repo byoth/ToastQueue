@@ -13,9 +13,11 @@ final class ToastMessageView: BaseView {
     @IBOutlet weak var messageLabel: UILabel!
     
     
-    struct Const {
-        static let animationDamping: CGFloat = 0.7
-        static let animationVelocity: CGFloat = 0.7
+    struct Constant {
+        struct Animation {
+            static let damping: CGFloat = 0.7
+            static let velocity: CGFloat = 0.7
+        }
     }
     
     
@@ -31,20 +33,20 @@ final class ToastMessageView: BaseView {
     override func setup() {
         super.setup()
         
-        self.backgroundColor = ToastManager.Setting.backgroundColor
+        self.backgroundColor = ToastManager.Setting.Message.backgroundColor
         self.clipsToBounds = true
         self.layer.cornerRadius = 16
         
         self.messageLabel.do {
-            $0.textColor = ToastManager.Setting.textColor
-            $0.font = .systemFont(ofSize: 15)
+            $0.textColor = ToastManager.Setting.Message.textColor
+            $0.font = ToastManager.Setting.Message.font
             $0.lineBreakMode = .byCharWrapping
             $0.numberOfLines = 0
         }
         
         self.animateToAppear()
         
-        DispatchQueue.main.asyncAfter(deadline: .now() + ToastManager.Setting.duration) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + ToastManager.Setting.Duration.show) {
             self.animateToDisappear()
         }
     }
@@ -59,7 +61,7 @@ final class ToastMessageView: BaseView {
         self.alpha = 0
         self.transform = .init(scaleX: 0.5, y: 0.5)
         
-        UIView.animate(withDuration: ToastManager.Setting.animationDuration, delay: 0, usingSpringWithDamping: Const.animationDamping, initialSpringVelocity: Const.animationVelocity, options: .curveEaseInOut, animations: {
+        UIView.animate(withDuration: ToastManager.Setting.Duration.animation, delay: 0, usingSpringWithDamping: Constant.Animation.damping, initialSpringVelocity: Constant.Animation.velocity, options: .curveEaseInOut, animations: {
             self.alpha = 1
             self.transform = .init(scaleX: 1, y: 1)
         })
@@ -72,7 +74,7 @@ final class ToastMessageView: BaseView {
         
         self._isDeactived = true
         
-        UIView.animate(withDuration: ToastManager.Setting.animationDuration, delay: 0, usingSpringWithDamping: Const.animationDamping, initialSpringVelocity: Const.animationVelocity, options: .curveEaseInOut, animations: {
+        UIView.animate(withDuration: ToastManager.Setting.Duration.animation, delay: 0, usingSpringWithDamping: Constant.Animation.damping, initialSpringVelocity: Constant.Animation.velocity, options: .curveEaseInOut, animations: {
             self.alpha = 0
             self.transform = .init(scaleX: 0.5, y: 0.5)
             

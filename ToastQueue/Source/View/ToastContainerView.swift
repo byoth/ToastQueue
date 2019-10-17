@@ -28,7 +28,7 @@ final class ToastContainerView: BaseView {
     override func setup() {
         super.setup()
         
-        self.messageStackView.spacing = ToastManager.Setting.messagesSpacing
+        self.messageStackView.spacing = ToastManager.Setting.Messages.spacing
     }
     
     
@@ -43,7 +43,7 @@ final class ToastContainerView: BaseView {
     
     private func clearOverflowedMessageViewsIfNeeded() {
         let views: [ToastMessageView] = self.messageStackView.arrangedSubviews.compactMap { $0 as? ToastMessageView }
-        let overflowedViewsCount: Int = max(views.count - ToastManager.Setting.maxMessagesCount, 0)
+        let overflowedViewsCount: Int = max(views.count - ToastManager.Setting.Messages.maxCount, 0)
         
         guard overflowedViewsCount > 0 else {
             return
