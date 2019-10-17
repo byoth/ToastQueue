@@ -9,20 +9,20 @@
 import Foundation
 
 
-public final class ToastWindow: UIWindow {
-    public static let shared: ToastWindow = .init()
+final class ToastWindow: UIWindow {
+    static let shared: ToastWindow = .init()
     
     private let _viewController: UIViewController = .init()
     private let _containerView: ToastContainerView = .init()
     
     
-    public override init(frame: CGRect) {
+    override init(frame: CGRect) {
         super.init(frame: frame)
         
         self.setup()
     }
     
-    public required init?(coder aDecoder: NSCoder) {
+    required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         
         self.setup()
