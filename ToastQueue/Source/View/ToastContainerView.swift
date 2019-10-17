@@ -13,13 +13,6 @@ final class ToastContainerView: BaseView {
     @IBOutlet weak var messageStackView: UIStackView!
     
     
-    internal var messageModels: [ToastMessageModel] = [] {
-        didSet {
-            self.updateMessageStackView(messageModels: self.messageModels)
-        }
-    }
-    
-    
     override func didMoveToSuperview() {
         super.didMoveToSuperview()
         
@@ -41,21 +34,33 @@ final class ToastContainerView: BaseView {
     }
     
     
-    fileprivate func updateMessageStackView(messageModels: [ToastMessageModel]) {
-        self.messageStackView.arrangedSubviews.forEach {
-            $0.removeFromSuperview()
+    func appendMessageView(_ model: ToastMessageModel) {
+        let view: ToastMessageView = self.createMessageView(model)
+        
+        self.messageStackView.addArrangedSubview(view)
+        
+        self.clearOverflowedMessageViewsIfNeeded()
+    }
+    
+    
+    private func clearOverflowedMessageViewsIfNeeded() {
+        let views: [ToastMessageView] = self.messageStackView.arrangedSubviews.compactMap { $0 as? ToastMessageView }
+        let overflowedViewsCount: Int = max(views.count - ToastManager.Setting.maxMessagesCount, 0)
+        
+        guard overflowedViewsCount > 0 else {
+            return
         }
         
-        messageModels.forEach {
-            self.messageStackView.addArrangedSubview(self.createMessageView($0))
+        views.enumerated().filter { $0.offset < overflowedViewsCount }.forEach {
+            $0.element.hide()
         }
     }
     
     
-    private func createMessageView(_ messageModel: ToastMessageModel) -> ToastMessageView {
+    private func createMessageView(_ model: ToastMessageModel) -> ToastMessageView {
         let view: ToastMessageView = .init()
         
-        view.messageModel = messageModel
+        view.model = model
         
         return view
     }

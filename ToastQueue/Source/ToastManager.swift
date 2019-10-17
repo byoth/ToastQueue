@@ -18,17 +18,17 @@ public final class ToastManager: NSObject {
     public struct Setting {
         public static var maxMessagesCount: Int = 5
         public static var messagesSpacing: CGFloat = 8
+        
+        public static var backgroundColor: UIColor = UIColor.black.withAlphaComponent(0.8)
+        public static var textColor: UIColor = .white
+        
+        public static var duration: TimeInterval = 2.0
+        public static var animationDuration: TimeInterval = 0.8
     }
     
     public weak var window: UIWindow?
     
-    private var toastContainerView: ToastContainerView?
-    
-    private var _messages: [ToastMessageModel] = [] {
-        didSet {
-            self.renderMessages()
-        }
-    }
+    private var containerView: ToastContainerView?
     
     
     private override init() {
@@ -37,31 +37,25 @@ public final class ToastManager: NSObject {
     
     
     public func showMessage(_ message: String) {
-        self._messages.append(.init(message: message))
+        let model: ToastMessageModel = .init(message: message)
         
-        if self._messages.count > Setting.maxMessagesCount {
-            self.hideOldestMessage()
-        }
-    }
-    
-    public func hideOldestMessage() {
-        self._messages.remove(at: 0)
+        self.updateContainerView()
+        
+        self.containerView?.appendMessageView(model)
     }
     
     
-    private func renderMessages() {
+    private func updateContainerView() {
         guard let viewController = self.window?.getHighestViewController() else {
             return
         }
         
-        if self.toastContainerView == nil {
+        if self.containerView == nil {
             let view: ToastContainerView = .init()
             
-            self.toastContainerView = view
+            self.containerView = view
             
             viewController.view.addSubview(view)
         }
-        
-        self.toastContainerView?.messageModels = self._messages
     }
 }
