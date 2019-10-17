@@ -10,6 +10,7 @@ import Foundation
 
 
 final class ToastMessageView: BaseView {
+    @IBOutlet weak var blurView: UIVisualEffectView!
     @IBOutlet weak var messageLabel: UILabel!
     
     
@@ -33,7 +34,6 @@ final class ToastMessageView: BaseView {
     override func setup() {
         super.setup()
         
-        self.backgroundColor = ToastManager.Setting.Message.backgroundColor
         self.clipsToBounds = true
         self.layer.cornerRadius = 16
         

@@ -22,7 +22,6 @@ public final class ToastManager: NSObject {
         }
         
         public struct Message {
-            public static var backgroundColor: UIColor = UIColor.black.withAlphaComponent(0.7)
             public static var textColor: UIColor = .white
             public static var font: UIFont = .systemFont(ofSize: 15)
         }
