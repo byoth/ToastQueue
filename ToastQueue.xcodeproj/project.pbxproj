@@ -17,7 +17,7 @@
 		3A500C1D2356EEB100AB5F04 /* NSObject+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A500C1C2356EEB100AB5F04 /* NSObject+Extension.swift */; };
 		3A500C3D2356FBDA00AB5F04 /* UIWindow+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A500C3C2356FBDA00AB5F04 /* UIWindow+Extension.swift */; };
 		3A500C412357197B00AB5F04 /* ToastMessageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A500C402357197B00AB5F04 /* ToastMessageModel.swift */; };
-		9A4EC668AE8579B9C7D65876 /* Pods_ToastQueue.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4653116A96F99E160E055355 /* Pods_ToastQueue.framework */; };
+		5809E1D038872844DECDA858 /* Pods_ToastQueue.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66B1A916007C954921B768F8 /* Pods_ToastQueue.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,9 +33,9 @@
 		3A500C1C2356EEB100AB5F04 /* NSObject+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSObject+Extension.swift"; sourceTree = "<group>"; };
 		3A500C3C2356FBDA00AB5F04 /* UIWindow+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIWindow+Extension.swift"; sourceTree = "<group>"; };
 		3A500C402357197B00AB5F04 /* ToastMessageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToastMessageModel.swift; sourceTree = "<group>"; };
-		4653116A96F99E160E055355 /* Pods_ToastQueue.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ToastQueue.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		A8AA1D58DC2D2CC86A785533 /* Pods-ToastQueue.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ToastQueue.release.xcconfig"; path = "Pods/Target Support Files/Pods-ToastQueue/Pods-ToastQueue.release.xcconfig"; sourceTree = "<group>"; };
-		BAEAB52701C56815E9A3D602 /* Pods-ToastQueue.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ToastQueue.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ToastQueue/Pods-ToastQueue.debug.xcconfig"; sourceTree = "<group>"; };
+		66B1A916007C954921B768F8 /* Pods_ToastQueue.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ToastQueue.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B9B219026548610E25264B6C /* Pods-ToastQueue.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ToastQueue.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ToastQueue/Pods-ToastQueue.debug.xcconfig"; sourceTree = "<group>"; };
+		F7210C1D4F1F7C334865AD5E /* Pods-ToastQueue.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ToastQueue.release.xcconfig"; path = "Pods/Target Support Files/Pods-ToastQueue/Pods-ToastQueue.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,20 +43,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9A4EC668AE8579B9C7D65876 /* Pods_ToastQueue.framework in Frameworks */,
+				5809E1D038872844DECDA858 /* Pods_ToastQueue.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0FC875EADCDFBC0DA7507FC3 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B9B219026548610E25264B6C /* Pods-ToastQueue.debug.xcconfig */,
+				F7210C1D4F1F7C334865AD5E /* Pods-ToastQueue.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		3A500BF62356E41600AB5F04 = {
 			isa = PBXGroup;
 			children = (
 				3A500C022356E41600AB5F04 /* ToastQueue */,
 				3A500C012356E41600AB5F04 /* Products */,
-				E540A3BD1BFA99E7E91A1BD9 /* Pods */,
-				52D99604D055266940D5B24E /* Frameworks */,
+				0FC875EADCDFBC0DA7507FC3 /* Pods */,
+				A8CF8FE7881124EE58129CA8 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -134,21 +143,12 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
-		52D99604D055266940D5B24E /* Frameworks */ = {
+		A8CF8FE7881124EE58129CA8 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				4653116A96F99E160E055355 /* Pods_ToastQueue.framework */,
+				66B1A916007C954921B768F8 /* Pods_ToastQueue.framework */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		E540A3BD1BFA99E7E91A1BD9 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				BAEAB52701C56815E9A3D602 /* Pods-ToastQueue.debug.xcconfig */,
-				A8AA1D58DC2D2CC86A785533 /* Pods-ToastQueue.release.xcconfig */,
-			);
-			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -169,7 +169,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3A500C082356E41600AB5F04 /* Build configuration list for PBXNativeTarget "ToastQueue" */;
 			buildPhases = (
-				4C327297CCB1B7B3D1D50540 /* [CP] Check Pods Manifest.lock */,
+				60CD685B0AE8E6D49AB208BB /* [CP] Check Pods Manifest.lock */,
 				3A500BFB2356E41600AB5F04 /* Headers */,
 				3A500BFC2356E41600AB5F04 /* Sources */,
 				3A500BFD2356E41600AB5F04 /* Frameworks */,
@@ -229,7 +229,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		4C327297CCB1B7B3D1D50540 /* [CP] Check Pods Manifest.lock */ = {
+		60CD685B0AE8E6D49AB208BB /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -395,7 +395,7 @@
 		};
 		3A500C092356E41600AB5F04 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = BAEAB52701C56815E9A3D602 /* Pods-ToastQueue.debug.xcconfig */;
+			baseConfigurationReference = B9B219026548610E25264B6C /* Pods-ToastQueue.debug.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
@@ -424,7 +424,7 @@
 		};
 		3A500C0A2356E41600AB5F04 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A8AA1D58DC2D2CC86A785533 /* Pods-ToastQueue.release.xcconfig */;
+			baseConfigurationReference = F7210C1D4F1F7C334865AD5E /* Pods-ToastQueue.release.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";

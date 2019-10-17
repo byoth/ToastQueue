@@ -8,7 +8,5 @@ target 'ToastQueue' do
   # Pods for ToastQueue
   pod 'SnapKit'
   
-  pod 'SwiftyAttributes'
-  
   pod 'Then'
 end

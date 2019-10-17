@@ -7,7 +7,4 @@ target 'ToastQueueExample' do
 
   # Pods for ToastQueueExample
   pod 'ToastQueue', path: '../'
-  
-  pod 'RxSwift'
-  pod 'RxCocoa'
 end
