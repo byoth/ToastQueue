@@ -8,6 +8,8 @@
 
 import Foundation
 
+import Then
+
 
 final class ToastContainerView: BaseView {
     @IBOutlet weak var messageStackView: UIStackView!
@@ -28,7 +30,10 @@ final class ToastContainerView: BaseView {
     override func setup() {
         super.setup()
         
-        self.messageStackView.spacing = ToastManager.Setting.Messages.spacing
+        self.messageStackView.do {
+            $0.spacing = ToastManager.Setting.Messages.spacing
+            $0.alignment = .center
+        }
     }
     
     
