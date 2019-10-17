@@ -38,9 +38,10 @@ final class ToastMessageView: BaseView {
         self.layer.cornerRadius = 16
         
         self.messageLabel.do {
+            $0.textAlignment = .center
             $0.textColor = ToastManager.Setting.Message.textColor
             $0.font = ToastManager.Setting.Message.font
-            $0.lineBreakMode = .byCharWrapping
+            $0.lineBreakMode = .byWordWrapping
             $0.numberOfLines = 0
         }
         

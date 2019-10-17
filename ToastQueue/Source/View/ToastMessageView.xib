@@ -20,7 +20,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AiA-RB-dMJ">
-                    <rect key="frame" x="16" y="12" width="382" height="26"/>
+                    <rect key="frame" x="24" y="12" width="366" height="26"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
@@ -28,9 +28,9 @@
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="AiA-RB-dMJ" firstAttribute="trailing" secondItem="iN0-l3-epB" secondAttribute="trailing" constant="-16" id="1Wq-Qk-fI5"/>
+                <constraint firstItem="AiA-RB-dMJ" firstAttribute="trailing" secondItem="iN0-l3-epB" secondAttribute="trailing" constant="-24" id="1Wq-Qk-fI5"/>
                 <constraint firstItem="AiA-RB-dMJ" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="12" id="QRo-Xc-IEr"/>
-                <constraint firstItem="AiA-RB-dMJ" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="16" id="eVx-4B-LES"/>
+                <constraint firstItem="AiA-RB-dMJ" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="24" id="eVx-4B-LES"/>
                 <constraint firstItem="AiA-RB-dMJ" firstAttribute="bottom" secondItem="iN0-l3-epB" secondAttribute="bottom" constant="-12" id="vnQ-H5-NEd"/>
             </constraints>
             <nil key="simulatedTopBarMetrics"/>

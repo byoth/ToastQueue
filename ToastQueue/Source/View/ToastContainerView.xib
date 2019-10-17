@@ -20,7 +20,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="mGJ-Ii-ljA">
-                    <rect key="frame" x="32" y="0.0" width="350" height="382"/>
+                    <rect key="frame" x="32" y="0.0" width="350" height="366"/>
                     <constraints>
                         <constraint firstAttribute="height" priority="1" id="UUt-J8-GdU"/>
                     </constraints>
@@ -30,7 +30,7 @@
             <constraints>
                 <constraint firstItem="mGJ-Ii-ljA" firstAttribute="trailing" secondItem="iN0-l3-epB" secondAttribute="trailing" constant="-32" id="BvP-dS-qkR"/>
                 <constraint firstItem="mGJ-Ii-ljA" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="MsR-4z-gzV"/>
-                <constraint firstItem="mGJ-Ii-ljA" firstAttribute="bottom" secondItem="iN0-l3-epB" secondAttribute="bottom" constant="-32" id="nS7-vr-fj1"/>
+                <constraint firstItem="mGJ-Ii-ljA" firstAttribute="bottom" secondItem="iN0-l3-epB" secondAttribute="bottom" constant="-48" id="nS7-vr-fj1"/>
                 <constraint firstItem="mGJ-Ii-ljA" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="32" id="y0X-4R-utH"/>
             </constraints>
             <nil key="simulatedTopBarMetrics"/>
