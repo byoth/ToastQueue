@@ -10,29 +10,17 @@ import UIKit
 
 import ToastQueue
 
-import RxSwift
-import RxCocoa
-
 
 final class ViewController: UIViewController {
     @IBOutlet weak var button: UIButton!
     
     
-    fileprivate let disposeBag: DisposeBag = .init()
+    var count: Int = 0
     
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    @IBAction func buttonDidTap(_ sender: Any) {
+        self.count += 1
         
-        var count: Int = 0
-        
-        self.button.rx.tap
-            .subscribe(onNext: {
-                count += 1
-                
-                ToastManager.shared.showMessage("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras pellentesque. \(count)")
-            })
-            .disposed(by: self.disposeBag)
+        ToastManager.shared.showMessage("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras pellentesque. \(self.count)")
     }
 }
-
