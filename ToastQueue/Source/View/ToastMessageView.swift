@@ -50,6 +50,11 @@ final class ToastMessageView: BaseView {
     }
     
     
+    func hide() {
+        self.animateToDisappear()
+    }
+    
+    
     private func animateToAppear() {
         self.alpha = 0
         self.transform = .init(scaleX: 0.5, y: 0.5)
@@ -76,11 +81,6 @@ final class ToastMessageView: BaseView {
                 self?.removeFromSuperview()
             }
         })
-    }
-    
-    
-    func hide() {
-        self.animateToDisappear()
     }
     
     

@@ -26,9 +26,7 @@ public final class ToastManager: NSObject {
         public static var animationDuration: TimeInterval = 0.8
     }
     
-    public weak var window: UIWindow?
-    
-    private var containerView: ToastContainerView?
+    private let _window: ToastWindow = .shared
     
     
     private override init() {
@@ -39,23 +37,11 @@ public final class ToastManager: NSObject {
     public func showMessage(_ message: String) {
         let model: ToastMessageModel = .init(message: message)
         
-        self.updateContainerView()
-        
-        self.containerView?.appendMessageView(model)
-    }
-    
-    
-    private func updateContainerView() {
-        guard let viewController = self.window?.getHighestViewController() else {
-            return
-        }
-        
-        if self.containerView == nil {
-            let view: ToastContainerView = .init()
+        self._window.do {
+            $0.isOpaque = false
+            $0.backgroundColor = .clear
             
-            self.containerView = view
-            
-            viewController.view.addSubview(view)
+            $0.showMessage(model)
         }
     }
 }

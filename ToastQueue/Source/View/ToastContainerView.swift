@@ -28,8 +28,6 @@ final class ToastContainerView: BaseView {
     override func setup() {
         super.setup()
         
-        self.isUserInteractionEnabled = false
-        
         self.messageStackView.spacing = ToastManager.Setting.messagesSpacing
     }
     
