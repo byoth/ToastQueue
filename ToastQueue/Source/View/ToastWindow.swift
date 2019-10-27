@@ -29,7 +29,7 @@ final class ToastWindow: UIWindow {
     
     private func setup() {
         self.rootViewController = self._viewController
-        self.windowLevel = UIWindow.Level.alert
+        self.windowLevel = ToastManager.Setting.Window.level
         self.isUserInteractionEnabled = false
         
         self.setupViewController()

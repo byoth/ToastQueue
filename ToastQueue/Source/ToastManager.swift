@@ -16,6 +16,10 @@ public final class ToastManager: NSObject {
     public static let shared: ToastManager = .init()
     
     public struct Setting {
+        public struct Window {
+            public static var level: UIWindow.Level = .alert + 1
+        }
+        
         public struct Messages {
             public static var maxCount: Int = 3
             public static var spacing: CGFloat = 8
@@ -28,7 +32,7 @@ public final class ToastManager: NSObject {
         
         public struct Duration {
             public static var show: TimeInterval = 2.0
-            public static var animation: TimeInterval = 0.8
+            public static var animation: TimeInterval = 0.5
         }
     }
     
