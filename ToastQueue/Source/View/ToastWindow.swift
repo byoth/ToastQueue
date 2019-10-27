@@ -10,28 +10,26 @@ import Foundation
 
 
 final class ToastWindow: UIWindow {
-    static let shared: ToastWindow = .init()
+    static let shared: ToastWindow = .init(frame: UIScreen.main.bounds)
     
     private let _viewController: UIViewController = .init()
     private let _containerView: ToastContainerView = .init()
     
     
-    override init(frame: CGRect) {
+    private override init(frame: CGRect) {
         super.init(frame: frame)
         
         self.setup()
     }
     
     required init?(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
-        
-        self.setup()
+        fatalError("init(coder:) has not been implemented")
     }
     
     
     private func setup() {
         self.rootViewController = self._viewController
-        self.windowLevel = UIWindow.Level.alert + 100
+        self.windowLevel = UIWindow.Level.alert
         self.isUserInteractionEnabled = false
         
         self.setupViewController()

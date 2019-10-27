@@ -43,11 +43,6 @@ public final class ToastManager: NSObject {
     public func showMessage(_ message: String) {
         let model: ToastMessageModel = .init(message: message)
         
-        self._window.do {
-            $0.isOpaque = false
-            $0.backgroundColor = .clear
-            
-            $0.showMessage(model)
-        }
+        self._window.showMessage(model)
     }
 }
