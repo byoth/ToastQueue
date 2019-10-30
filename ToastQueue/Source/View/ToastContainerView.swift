@@ -26,11 +26,13 @@ final class ToastContainerView: BaseView {
         }
     }
     
+    override func hitTest(_ point: CGPoint, with event: UIEvent?) -> UIView? {
+        return nil
+    }
+    
     
     override func setup() {
         super.setup()
-        
-        self.isUserInteractionEnabled = false
         
         self.messageStackView.do {
             $0.spacing = ToastManager.Setting.Messages.spacing

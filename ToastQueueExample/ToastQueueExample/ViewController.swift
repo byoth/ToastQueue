@@ -22,7 +22,7 @@ final class ViewController: UIViewController {
     @IBAction func buttonDidTap(_ sender: Any) {
         self.count += 1
         
-        ToastManager.shared.showMessage("\(self.textField.text ?? "") \(self.count)")
+        ToastManager.shared.showMessage("\(self.textField.text ?? "")\(self.count)")
         
         self.view.endEditing(true)
     }
