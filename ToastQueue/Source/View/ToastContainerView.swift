@@ -30,6 +30,8 @@ final class ToastContainerView: BaseView {
     override func setup() {
         super.setup()
         
+        self.isUserInteractionEnabled = false
+        
         self.messageStackView.do {
             $0.spacing = ToastManager.Setting.Messages.spacing
             $0.alignment = .center

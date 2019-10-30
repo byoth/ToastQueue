@@ -16,10 +16,6 @@ public final class ToastManager: NSObject {
     public static let shared: ToastManager = .init()
     
     public struct Setting {
-        public struct Window {
-            public static var level: UIWindow.Level = .alert + 1
-        }
-        
         public struct Messages {
             public static var maxCount: Int = 3
             public static var spacing: CGFloat = 8
@@ -36,7 +32,10 @@ public final class ToastManager: NSObject {
         }
     }
     
-    private let _window: ToastWindow = .shared
+    
+    private var _window: UIWindow?
+    
+    private var _containerView: ToastContainerView = .init()
     
     
     private override init() {
@@ -45,8 +44,22 @@ public final class ToastManager: NSObject {
     
     
     public func showMessage(_ message: String) {
+        self.updateWindowIfNeeded()
+        
         let model: ToastMessageModel = .init(message: message)
         
-        self._window.showMessage(model)
+        self._containerView.appendMessageView(model)
+    }
+    
+    
+    private func updateWindowIfNeeded() {
+        guard self._window != UIApplication.shared.keyWindow else {
+            return
+        }
+        
+        self._window = UIApplication.shared.keyWindow
+        
+        self._containerView.removeFromSuperview()
+        self._window?.addSubview(self._containerView)
     }
 }
