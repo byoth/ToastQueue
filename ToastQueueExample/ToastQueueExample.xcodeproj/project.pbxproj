@@ -12,7 +12,7 @@
 		3A500C302356F2B300AB5F04 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A500C2E2356F2B300AB5F04 /* Main.storyboard */; };
 		3A500C322356F2B400AB5F04 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3A500C312356F2B400AB5F04 /* Assets.xcassets */; };
 		3A500C352356F2B400AB5F04 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A500C332356F2B400AB5F04 /* LaunchScreen.storyboard */; };
-		85DA56E652209CB0C51B0E85 /* Pods_ToastQueueExample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A0983AF72CC155248AC8F2CE /* Pods_ToastQueueExample.framework */; };
+		C6794AF066B8E8E3A39331E4 /* Pods_ToastQueueExample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73971379964A17DFFE0A012C /* Pods_ToastQueueExample.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,9 +23,9 @@
 		3A500C312356F2B400AB5F04 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3A500C342356F2B400AB5F04 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3A500C362356F2B400AB5F04 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		5922EAB41386170E1C2934BC /* Pods-ToastQueueExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ToastQueueExample.release.xcconfig"; path = "Pods/Target Support Files/Pods-ToastQueueExample/Pods-ToastQueueExample.release.xcconfig"; sourceTree = "<group>"; };
-		8ABEDE220BB9929D98ED977A /* Pods-ToastQueueExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ToastQueueExample.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ToastQueueExample/Pods-ToastQueueExample.debug.xcconfig"; sourceTree = "<group>"; };
-		A0983AF72CC155248AC8F2CE /* Pods_ToastQueueExample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ToastQueueExample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5EB57ED656F7B8774DA15B9A /* Pods-ToastQueueExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ToastQueueExample.debug.xcconfig"; path = "Target Support Files/Pods-ToastQueueExample/Pods-ToastQueueExample.debug.xcconfig"; sourceTree = "<group>"; };
+		73971379964A17DFFE0A012C /* Pods_ToastQueueExample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ToastQueueExample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C3F6245BCCDD5A8CEFCB870E /* Pods-ToastQueueExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ToastQueueExample.release.xcconfig"; path = "Target Support Files/Pods-ToastQueueExample/Pods-ToastQueueExample.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,20 +33,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				85DA56E652209CB0C51B0E85 /* Pods_ToastQueueExample.framework in Frameworks */,
+				C6794AF066B8E8E3A39331E4 /* Pods_ToastQueueExample.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1BB5BABDD3C10E3C2FD8720A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				73971379964A17DFFE0A012C /* Pods_ToastQueueExample.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		3A500C1E2356F2B300AB5F04 = {
 			isa = PBXGroup;
 			children = (
 				3A500C292356F2B300AB5F04 /* ToastQueueExample */,
 				3A500C282356F2B300AB5F04 /* Products */,
-				AE1A6EE0C4FF34495EF92811 /* Pods */,
-				AA0E8A8546CDA2FC116C5825 /* Frameworks */,
+				5BC1CEA7AAAE63ACBFE62757 /* Pods */,
+				1BB5BABDD3C10E3C2FD8720A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -71,21 +79,14 @@
 			path = ToastQueueExample;
 			sourceTree = "<group>";
 		};
-		AA0E8A8546CDA2FC116C5825 /* Frameworks */ = {
+		5BC1CEA7AAAE63ACBFE62757 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				A0983AF72CC155248AC8F2CE /* Pods_ToastQueueExample.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		AE1A6EE0C4FF34495EF92811 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				8ABEDE220BB9929D98ED977A /* Pods-ToastQueueExample.debug.xcconfig */,
-				5922EAB41386170E1C2934BC /* Pods-ToastQueueExample.release.xcconfig */,
+				5EB57ED656F7B8774DA15B9A /* Pods-ToastQueueExample.debug.xcconfig */,
+				C3F6245BCCDD5A8CEFCB870E /* Pods-ToastQueueExample.release.xcconfig */,
 			);
 			name = Pods;
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -95,11 +96,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3A500C392356F2B400AB5F04 /* Build configuration list for PBXNativeTarget "ToastQueueExample" */;
 			buildPhases = (
-				72F2F3C43BD85A974B14C192 /* [CP] Check Pods Manifest.lock */,
+				0FE9731B44E2D1C34E33EBDF /* [CP] Check Pods Manifest.lock */,
 				3A500C232356F2B300AB5F04 /* Sources */,
 				3A500C242356F2B300AB5F04 /* Frameworks */,
 				3A500C252356F2B300AB5F04 /* Resources */,
-				7B184BC68F54C6EBCDBE5E4E /* [CP] Embed Pods Frameworks */,
+				17A6D20CFE5334E418CA6095 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -157,7 +158,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		72F2F3C43BD85A974B14C192 /* [CP] Check Pods Manifest.lock */ = {
+		0FE9731B44E2D1C34E33EBDF /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -179,32 +180,21 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		7B184BC68F54C6EBCDBE5E4E /* [CP] Embed Pods Frameworks */ = {
+		17A6D20CFE5334E418CA6095 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-ToastQueueExample/Pods-ToastQueueExample-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
-				"${BUILT_PRODUCTS_DIR}/SwiftyAttributes/SwiftyAttributes.framework",
-				"${BUILT_PRODUCTS_DIR}/Then/Then.framework",
-				"${BUILT_PRODUCTS_DIR}/ToastQueue/ToastQueue.framework",
+				"${PODS_ROOT}/Target Support Files/Pods-ToastQueueExample/Pods-ToastQueueExample-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-			);
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyAttributes.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Then.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ToastQueue.framework",
+				"${PODS_ROOT}/Target Support Files/Pods-ToastQueueExample/Pods-ToastQueueExample-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ToastQueueExample/Pods-ToastQueueExample-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ToastQueueExample/Pods-ToastQueueExample-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -359,7 +349,7 @@
 		};
 		3A500C3A2356F2B400AB5F04 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8ABEDE220BB9929D98ED977A /* Pods-ToastQueueExample.debug.xcconfig */;
+			baseConfigurationReference = 5EB57ED656F7B8774DA15B9A /* Pods-ToastQueueExample.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -379,7 +369,7 @@
 		};
 		3A500C3B2356F2B400AB5F04 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5922EAB41386170E1C2934BC /* Pods-ToastQueueExample.release.xcconfig */;
+			baseConfigurationReference = C3F6245BCCDD5A8CEFCB870E /* Pods-ToastQueueExample.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
