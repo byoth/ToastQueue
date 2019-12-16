@@ -18,6 +18,10 @@ final class ToastContainerView: BaseView {
     override func didMoveToSuperview() {
         super.didMoveToSuperview()
         
+        guard self.superview != nil else {
+            return
+        }
+        
         self.snp.makeConstraints {
             $0.height.greaterThanOrEqualTo(0)
             $0.bottom.equalToSuperview()

@@ -33,7 +33,7 @@ public final class ToastManager: NSObject {
     }
     
     
-    private var _window: UIWindow?
+    private var _topMostController: UIViewController?
     
     private var _containerView: ToastContainerView = .init()
     
@@ -53,13 +53,17 @@ public final class ToastManager: NSObject {
     
     
     private func updateWindowIfNeeded() {
-        guard self._window != UIApplication.shared.keyWindow else {
+        let window: UIWindow? = UIApplication.shared.keyWindow
+        let topMostController: UIViewController? = window?.topMostController()
+        
+        guard self._topMostController != topMostController else {
             return
         }
         
-        self._window = UIApplication.shared.keyWindow
+        self._topMostController = topMostController
         
         self._containerView.removeFromSuperview()
-        self._window?.addSubview(self._containerView)
+        
+        window?.addSubview(self._containerView)
     }
 }
