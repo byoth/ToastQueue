@@ -33,7 +33,7 @@ public final class ToastManager: NSObject {
     }
     
     
-    private var _topMostController: UIViewController?
+    private weak var _topMostController: UIViewController?
     
     private var _containerView: ToastContainerView = .init()
     
@@ -49,6 +49,8 @@ public final class ToastManager: NSObject {
         let model: ToastMessageModel = .init(message: message)
         
         self._containerView.appendMessageView(model)
+        
+        self._topMostController?.view.endEditing(true)
     }
     
     
